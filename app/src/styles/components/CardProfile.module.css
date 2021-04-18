@@ -11,10 +11,9 @@
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   background: #fff;
-  transition: 0.5s all ease;
 }
 
-.container:hover {
+.container:hover, .container:focus-within {
   background: linear-gradient(to bottom, var(--teal-50), #fff);
   border: 1px solid var(--teal-500);
 }
@@ -24,10 +23,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: 0.5s all ease;
 }
 
 .container:hover .header {
+  flex-direction: row;
+}
+
+.container:focus-within .header {
   flex-direction: row;
 }
 
@@ -38,9 +40,18 @@
   height: 150px;
   border-radius: 50%;
   border: 2px solid var(--teal-100);
+  z-index: 50;
 }
 
 .container:hover img {
+  position: static;
+  width: 75px;
+  height: 75px;
+  border: 2px solid var(--teal-500);
+  margin-right: 0.75rem;
+}
+
+.container:focus-within img {
   position: static;
   width: 75px;
   height: 75px;
@@ -55,6 +66,10 @@
 }
 
 .container:hover .header h3 {
+  margin: 0;
+}
+
+.container:focus-within .header h3 {
   margin: 0;
 }
 
@@ -73,22 +88,32 @@
 }
 
 .link a {
+  position: absolute;
+  top: 0;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
   color: #fff;
   font-size: 1.1rem;
-  display: none;
-  visibility: hidden;
+  display: inline-block;
   background: var(--teal-700);
-  transition: 0.5s all ease;
 }
 
-.link a:hover {
+.link a:hover, .link a:focus {
   background: var(--teal-500);
 }
 
+.link a:focus {
+  border: 1px solid var(--teal-900);
+}
+
 .container:hover .link a {
+  position: static;
   display: inline-block;
   visibility: visible;
-  transition: 0.5s all ease;
+}
+
+.container:focus-within .link a {
+  position: static;
+  display: inline-block;
+  visibility: visible;
 }
