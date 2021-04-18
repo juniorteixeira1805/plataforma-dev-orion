@@ -1,0 +1,94 @@
+.container {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid var(--teal-100);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  transition: 0.5s all ease;
+}
+
+.container:hover {
+  background: linear-gradient(to bottom, var(--teal-50), #fff);
+  border: 1px solid var(--teal-500);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s all ease;
+}
+
+.container:hover .header {
+  flex-direction: row;
+}
+
+.header img {
+  position: absolute;
+  top: calc(0px - 75px);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--teal-100);
+}
+
+.container:hover img {
+  position: static;
+  width: 75px;
+  height: 75px;
+  border: 2px solid var(--teal-500);
+  margin-right: 0.75rem;
+}
+
+.header h3 {
+  margin-top: 75px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.container:hover .header h3 {
+  margin: 0;
+}
+
+.about {
+  background: none;
+}
+
+.about p {
+  text-align: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  display: none;
+  visibility: hidden;
+  background: var(--teal-700);
+  transition: 0.5s all ease;
+}
+
+.link a:hover {
+  background: var(--teal-500);
+}
+
+.container:hover .link a {
+  display: inline-block;
+  visibility: visible;
+  transition: 0.5s all ease;
+}
