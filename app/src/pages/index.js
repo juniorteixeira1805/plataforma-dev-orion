@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CardProfile from '../components/CardProfile'
 
+// Comentário só pra fazer um novo commit
 export default function Home( {org} ) {
   return (
     <div className={styles.container}>
