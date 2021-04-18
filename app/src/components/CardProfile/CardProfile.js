@@ -1,4 +1,4 @@
-import styles from '../styles/components/CardProfile.module.css'
+import styles from './CardProfile.module.css'
 
 function CardProfile({ name, avatar, bio, url }) {
   return (
