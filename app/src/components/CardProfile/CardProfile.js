@@ -17,4 +17,4 @@ function CardProfile({ name, avatar, bio, url }) {
   )
 }
 
-export default CardProfile
+export CardProfile

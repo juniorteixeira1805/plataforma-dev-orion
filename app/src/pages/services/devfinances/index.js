@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Header, Footer, Balance, Card } from './styles'
+import { Header, Footer, Balance, Card } from './styles.js'
 
 export default function Home( {org} ) {
   return (
@@ -30,7 +30,6 @@ export default function Home( {org} ) {
                       height={50}
                     />
                   </h3>
-                  <p id="incomeDisplay">R$ 0,00</p>
               </Card>
 
               <Card>
@@ -45,7 +44,6 @@ export default function Home( {org} ) {
                       height={50}
                       />
                   </h3>
-                  <p id="expenseDisplay">R$ 0,00</p>
               </Card>
 
               <Card total>
@@ -60,7 +58,6 @@ export default function Home( {org} ) {
                       height={50}
                       />
                   </h3>
-                  <p id="totalDisplay">R$ 0,00</p>
               </Card>
           </Balance>
 
