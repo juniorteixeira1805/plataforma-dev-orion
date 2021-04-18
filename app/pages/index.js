@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home( {org} ) {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,9 +15,28 @@ export default function Home() {
         </h1>
       </main>
 
+      <div>
+        <h1> {org.bio}</h1>
+      </div>
+
       <footer className={styles.footer}>
           Powered by{' '}Dev Orion || devorion01@gmail.com
       </footer>
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+
+  const response = await fetch('https://api.github.com/users/juniorteixeira1805')
+  const data = await response.json()
+
+  return {
+    props: {
+      org: data,
+    },
+    
+    revalidate: 20,
+  }
+
 }
