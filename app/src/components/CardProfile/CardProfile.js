@@ -1,6 +1,6 @@
 import styles from './CardProfile.module.css'
 
-function CardProfile({ name, avatar, bio, url }) {
+export default function CardProfile({ name, avatar, bio, url }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -16,5 +16,3 @@ function CardProfile({ name, avatar, bio, url }) {
     </div>
   )
 }
-
-export CardProfile
