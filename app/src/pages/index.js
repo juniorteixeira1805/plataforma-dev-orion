@@ -7,6 +7,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `
 
+// Comentário só pra fazer um novo commit
 export default function Home( {org} ) {
   return (
     <div className={styles.container}>
