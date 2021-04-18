@@ -1,5 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`
 
 export default function Home( {org} ) {
   return (
@@ -10,6 +16,7 @@ export default function Home( {org} ) {
       </Head>
 
       <main className={styles.main}>
+        <Title>Hello</Title>
         <h1 className={styles.title}>
           Página em construção ...
         </h1>
