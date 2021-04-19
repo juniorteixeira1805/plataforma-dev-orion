@@ -92,59 +92,73 @@ export default function Finances( ) {
                 </table>
             </section>
         </main>
+        {
+            modal === true ?
+            <div className={styles.modaloverlayactive}>
+                <div className={styles.modal}>
+                    <h2 className={styles.headermodal}>Nova Transação</h2>
+                    <div id="form">
+                        <form action="">
+                            <div className={styles.inputgroup}>
+                                <label 
+                                    className={styles.sronly} 
+                                    for="description">Descrição</label>
+                                <input 
+                                    type="text" 
+                                    id="description" 
+                                    name="description"
+                                    className={styles.input}
+                                    placeholder="Descrição"
+                                />
+                            </div>
 
-        <div className={modal === true ? styles.modaloverlayaction : styles.modaloverlay}>
-            <div className={styles.modal}>
-                <div id="form">
-                    <h2>Nova Transação</h2>
-                    <form action="">
-                        <div class="input-group">
-                            <label 
-                                class="sr-only" 
-                                for="description">Descrição</label>
-                            <input 
-                                type="text" 
-                                id="description" 
-                                name="description"
-                                placeholder="Descrição"
-                            />
-                        </div>
+                            <div className={styles.inputgroup}>
+                                <label 
+                                    className={styles.sronly} 
+                                    for="amount">Valor</label>
+                                <input 
+                                    type="number"
+                                    step="0.01"
+                                    id="amount" 
+                                    name="amount"
+                                    className={styles.input}
+                                    placeholder="0,00"
+                                />
+                                <small className={styles.help}>Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
+                            </div>
 
-                        <div class="input-group">
-                            <label 
-                                class="sr-only" 
-                                for="amount">Valor</label>
-                            <input 
-                                type="number"
-                                step="0.01"
-                                id="amount" 
-                                name="amount"
-                                placeholder="0,00"
-                            />
-                            <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
-                        </div>
+                            <div c>
+                                <label 
+                                    className={styles.sronly} 
+                                    for="date">Data</label>
+                                <input 
+                                    type="date" 
+                                    id="date" 
+                                    name="date"
+                                    className={styles.input}
+                                />
+                            </div>
 
-                        <div class="input-group">
-                            <label 
-                                class="sr-only" 
-                                for="date">Data</label>
-                            <input 
-                                type="date" 
-                                id="date" 
-                                name="date"
-                            />
-                        </div>
-
-                        <div class="input-group actions">
-                            <a 
-                            href="#" 
-                            class="button cancel">Cancelar</a>
-                            <button>Salvar</button>
-                        </div>
-                    </form>
+                            <div className={styles.modalFooter}>
+                                <a 
+                                href="#" 
+                                className={styles.buttoncancel}
+                                onClick={toogleModal}>Cancelar</a>
+                                <button
+                                className={styles.buttonsalvar}
+                                >Salvar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        :
+
+        undefined
+
+        }
     </>
   )
 }
