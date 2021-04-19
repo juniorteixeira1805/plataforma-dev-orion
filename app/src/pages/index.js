@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import CardProfile from '../components/CardProfile'
 
 // Comentário só pra fazer um novo commit
-export default function Home( {org} ) {
+export default function Home( ) {
   return (
     <div className={styles.container}>
       <Head>
@@ -24,16 +24,13 @@ export default function Home( {org} ) {
         </h1>
       </main>
 
-      <div>
-        <h1> {org.bio}</h1>
-      </div>
-
       <footer className={styles.footer}>
           Powered by{' '}Dev Orion || devorion01@gmail.com
       </footer>
     </div>
   )
 }
+<<<<<<< HEAD
 
 export const getStaticProps = async () => {
 
@@ -49,3 +46,5 @@ export const getStaticProps = async () => {
   }
 
 }
+=======
+>>>>>>> dev-junior
