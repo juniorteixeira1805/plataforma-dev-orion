@@ -5,7 +5,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 function NavBar() {
   const [menu, setMenu] = useState(false)
 
-  function handleMenuClick() {
+  function handleClick() {
     setMenu(!menu)
   }
 
@@ -16,7 +16,7 @@ function NavBar() {
         <span className={styles.logo}>DevOrion</span>
         <button 
           className={styles.button_icon} 
-          onClick={handleMenuClick}
+          onClick={handleClick}
         >
           { menu ?
             <AiOutlineClose className={styles.icon} /> : 
@@ -28,11 +28,12 @@ function NavBar() {
       <nav 
         className={styles.navbar}
         style={{
-          display: menu ? "block" : "none"
+          display: menu ? "flex" : "none"
         }}
       >
-        <a href="#">Home</a>
-        <a href="#">Projetos</a>
+        <a href="#" onClick={() => setMenu(false)}>Home</a>
+        <a href="#" onClick={() => setMenu(false)}>Projetos</a>
+        <a href="#" onClick={() => setMenu(false)}>Equipe</a>
       </nav>
 
     </header>
