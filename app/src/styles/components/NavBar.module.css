@@ -57,6 +57,7 @@
   border: 2px solid var(--teal-400);
   border-radius: 10px;
   width: calc(100% - 2rem);
+  max-width: 360px;
   padding: 0 1rem;
   background: var(--teal-50);
   flex-direction: column;
@@ -86,4 +87,54 @@
 
 .navbar a:nth-child(n+2) {
   border-top: 1px solid var(--teal-400);
+}
+
+@media (min-width: 360px) {
+  .navbar {
+    right: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+  }
+
+  .navbar {
+    position: static;
+    border: none;
+    width: auto;
+    padding: 0;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar::before {
+    position: static;
+    display: none;
+  }
+
+  .navbar a {
+    width: 100%;
+    padding: 0.5rem 1rem;;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--teal-50);
+    color: var(--teal-900);
+    border: 1px solid var(--teal-400);
+    border-radius: 5px;
+  }
+  
+  .navbar a:nth-child(n+2) {
+    margin-left: 1rem;
+  }
+
+  .button_icon {
+    display: none;
+  }
 }
