@@ -2,6 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CardProfile from '../components/CardProfile'
 
+import Image from 'next/image'
+
 // Comentário só pra fazer um novo commit
 export default function Home( ) {
   return (
@@ -12,13 +14,12 @@ export default function Home( ) {
       </Head>
 
       <main className={styles.main}>
-        {/*
-        <CardProfile 
-          name={org.name}
-          avatar={org.avatar_url}
-          bio={org.bio}
-          url={org.html_url} />
-        */}
+        <Image
+          src="/assets/logo1.png"
+          alt="Logo da dev orion"
+          width={250}
+          height={250}
+        />
         <h1 className={styles.title}>
           Página em construção ...
         </h1>
