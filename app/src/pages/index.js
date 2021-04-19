@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import CardProfile from '../components/CardProfile'
-import NavBar from '../components/NavBar'
+// import CardProfile from '../components/CardProfile'
+// import NavBar from '../components/NavBar'
 
 import Image from 'next/image'
 
@@ -13,8 +13,6 @@ export default function Home() {
         <title>Dev Orion</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <NavBar />
 
       <main className={styles.main}>
         <Image

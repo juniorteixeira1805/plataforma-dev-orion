@@ -109,6 +109,7 @@
     width: auto;
     padding: 0;
     background: none;
+    display: flex !important;
     flex-direction: row;
     align-items: center;
   }
