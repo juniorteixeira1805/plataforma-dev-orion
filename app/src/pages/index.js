@@ -1,17 +1,20 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CardProfile from '../components/CardProfile'
+import NavBar from '../components/NavBar'
 
 import Image from 'next/image'
 
 // Comentário só pra fazer um novo commit
-export default function Home( ) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Dev Orion</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <NavBar />
 
       <main className={styles.main}>
         <Image
@@ -20,6 +23,7 @@ export default function Home( ) {
           width={250}
           height={250}
         />
+
         <h1 className={styles.title}>
           Página em construção ...
         </h1>

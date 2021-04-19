@@ -2,7 +2,7 @@ import styles from '../styles/components/CardProfile.module.css'
 
 function CardProfile({ name, avatar, bio, url }) {
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       <div className={styles.header}>
         <img src={avatar} alt={name} />
         <h3>{name}</h3>
@@ -13,7 +13,7 @@ function CardProfile({ name, avatar, bio, url }) {
       <div className={styles.link}>
         <a href={url} target="_blank">Saiba mais</a>
       </div>
-    </div>
+    </article>
   )
 }
 

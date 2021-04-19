@@ -1,0 +1,56 @@
+.header {
+  --header-height: 5.5rem;
+  height: var(--header-height);
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.content { 
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button_icon {
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--teal-300);
+  background: var(--teal-600);
+  color: #fff;
+  transition: 0.2s all;
+}
+
+.button_icon:hover {
+  background: var(--teal-400);
+  color: black;
+  border: 2px solid var(--teal-900);
+}
+
+.button_icon:focus {
+  background: var(--teal-400);
+  color: black;
+  border: 2px solid var(--teal-900);
+}
+
+.navbar {
+  position: absolute;
+  top: var(--header-height);
+}
