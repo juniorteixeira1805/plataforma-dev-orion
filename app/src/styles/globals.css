@@ -1,4 +1,5 @@
 :root {
+/*=== Cores primarias da plataforma ===*/
   --teal-50: #E6FFFA;
   --teal-100: #B2F5EA;
   --teal-200: #81E6D9;
@@ -9,6 +10,22 @@
   --teal-700: #285E61;
   --teal-800: #234E52;
   --teal-900: #1D4044;
+
+
+  /*=== Cores para botões e acessorios ===*/
+  --red-lumos: #F31E32;
+  --red-100: #DC848D;
+  --red-300: #CE535F;
+  --red-400: #C73A48;
+  --red-600: #BA0A1B;
+  --red-700: #8A0714;
+
+  --green-lumos: #D1F5EC;
+  --green-100: #B3EEE0;
+  --green-300: #95E7D4;
+  --green-400: #68DEC2;
+  --green-600: #489B87;
+  --green-700: #346F61;
 }
 
 html,
