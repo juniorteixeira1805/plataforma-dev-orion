@@ -41,6 +41,8 @@
   border-radius: 50%;
   border: 2px solid var(--teal-100);
   z-index: 50;
+  transition: 0.2s;
+
 }
 
 .container:hover img {

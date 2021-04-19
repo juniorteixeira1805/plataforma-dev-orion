@@ -12,12 +12,6 @@ export default function Home( {org} ) {
       </Head>
 
       <main className={styles.main}>
-        <CardProfile 
-          name={org.name} 
-          avatar={org.avatar_url} 
-          bio={org.bio} 
-          url={org.html_url} 
-        />
         <h1 className={styles.title}>
           Página em construção ...
         </h1>
@@ -38,8 +32,7 @@ export const getStaticProps = async () => {
 
   const response = await fetch('https://api.github.com/users/juniorteixeira1805')
   const data = await response.json()
-  console.log(data)
-
+  
   return {
     props: {
       org: data,

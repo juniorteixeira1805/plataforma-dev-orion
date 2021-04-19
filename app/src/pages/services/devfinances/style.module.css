@@ -1,0 +1,152 @@
+/* Global ===================== */
+.sronly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Header ===================== */
+.header {
+    background:var(--teal-700);
+    padding: 2rem 0 6rem;
+    text-align: center;
+}
+
+/* Container ===================== */
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* Balance ===================== */
+.balance {
+    margin-top: -8rem;
+}
+
+.balance h2 {
+    color:white;
+    margin-top:0;
+}
+
+/* Cards ========== */
+
+.card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+
+    margin-bottom: 2rem;
+
+    color: var(--teal-500);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    white-space:nowrap;
+    margin-top: 1rem;
+}
+
+.cardtotal {
+    background: var(--teal-600);
+    color: white;
+
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+
+    margin-bottom: 2rem;
+}
+
+.cardtotal h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardtotal p {
+    font-size: 2rem;
+    line-height: 3rem;
+    white-space:nowrap;
+    margin-top: 1rem;
+}
+
+/* Table ========================= */
+.transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+}
+
+.buttonnew {
+    display: inline-block;
+    margin-bottom: .8rem;
+
+    color: var(--teal-900);
+}
+
+.table thead tr th:first-child, 
+.table tbody tr td:first-child
+{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.table thead tr th:last-child, 
+.table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.table thead th {
+    background: white;
+
+    font-weight: normal;
+    padding: 1rem 2rem;
+
+    text-align: left;
+}
+
+.table tbody tr {
+    opacity: 0.7
+}
+
+.table tbody tr:hover {
+    opacity: 1
+}
+
+.table tbody td {
+    background:white;
+    padding: 1rem 2rem;
+}
+
+/* Responsividade ================== */
+
+@media (min-width: 800px) {
+    .balance{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
