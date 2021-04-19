@@ -1,8 +1,16 @@
+import { useState } from 'react'
 import Image from 'next/image'
 
 import styles from './style.module.css'
 
-export default function Home( {org} ) {
+export default function Finances( ) {
+
+  const [ modal, setModal] = useState(false)
+
+  const toogleModal = async => {
+    setModal( modal === false)
+  }
+
   return (
     <>
       <header className={styles.header}>
@@ -68,8 +76,7 @@ export default function Home( {org} ) {
             <section className={styles.transaction}>
                 <h2 className={styles.sronly}>Transações</h2>
 
-                <a href="#" 
-                className={styles.buttonnew}>+ Nova Transação</a>
+                <button type="button" className={styles.buttonnew} onClick={toogleModal}>+ Nova transação</button>
                 
                 <table className={styles.table}>
                     <thead>
@@ -85,6 +92,59 @@ export default function Home( {org} ) {
                 </table>
             </section>
         </main>
+
+        <div className={modal === true ? styles.modaloverlayaction : styles.modaloverlay}>
+            <div className={styles.modal}>
+                <div id="form">
+                    <h2>Nova Transação</h2>
+                    <form action="">
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="description">Descrição</label>
+                            <input 
+                                type="text" 
+                                id="description" 
+                                name="description"
+                                placeholder="Descrição"
+                            />
+                        </div>
+
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="amount">Valor</label>
+                            <input 
+                                type="number"
+                                step="0.01"
+                                id="amount" 
+                                name="amount"
+                                placeholder="0,00"
+                            />
+                            <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
+                        </div>
+
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="date">Data</label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                name="date"
+                            />
+                        </div>
+
+                        <div class="input-group actions">
+                            <a 
+                            href="#" 
+                            class="button cancel">Cancelar</a>
+                            <button>Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </>
   )
 }
