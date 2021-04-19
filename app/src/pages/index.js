@@ -30,7 +30,6 @@ export default function Home( ) {
     </div>
   )
 }
-<<<<<<< HEAD
 
 export const getStaticProps = async () => {
 
@@ -46,5 +45,3 @@ export const getStaticProps = async () => {
   }
 
 }
-=======
->>>>>>> dev-junior
