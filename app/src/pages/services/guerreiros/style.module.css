@@ -1,0 +1,94 @@
+/*** estilização do header ***/
+.header{
+    background:var(--blue-1000);
+    padding: 1rem 0 3rem;
+    text-align: center;
+}
+
+.header h1{
+    color: var(--blue-50);
+}
+
+.main {
+    width: 100%;
+}
+
+.section {
+    padding: 1rem 3rem;
+    background:var(--blue-1000);
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-bottom: solid medium #fff;
+}
+
+.section form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.input{
+    margin: 1rem;
+    padding: 0.3rem;
+    color: var(--blue-900);
+
+    height: 2.5rem;
+    border-radius: 0.5rem;
+
+    font-size: medium;
+    font-weight: 400;
+
+    width: 100%;
+}
+
+
+.section form select option{
+    padding: 1rem;
+    background-color: var(--blue-50);
+    color: var(--blue-900);
+
+    line-height: 2rem;
+
+    font-size: medium;
+    font-weight: 400;
+
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.textarea{
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--blue-1000);
+
+    height: 8rem;
+    border-radius: 0.5rem;
+
+    font-size: larger;
+    font-weight: 700;
+
+    width: 100%;
+}
+
+.button{
+    margin: 1rem;
+    color: var(--blue-1000);
+    text-align: center;
+    height: 2rem;
+    border-radius: 0.5rem;
+
+    font-size: medium;
+    font-weight: 700;
+    cursor: pointer;
+
+    width: 100%;
+}
