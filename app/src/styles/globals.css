@@ -53,8 +53,9 @@ a {
 }
 
 * {
-  box-sizing: border-box;
-}
+  -webkit-font-smoothing: antialiased;
+  outline: 0;
+  box-sizing: border-box;}
 
 /* Extra large widgets */
 @media (max-width: 1280px) {
