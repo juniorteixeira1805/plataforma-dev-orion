@@ -170,7 +170,7 @@ export default function Guerreiros() {
                         <div className={styles.div}>
                             <div style={{width: '100%', margin: '0 1rem 0 0'}}>
                                 <Input className={styles.input} name="evento" value="Cartão" disabled/>
-                                <Select label="Clube:" className={styles.input} name="club" placeholder="gol" options={[{id: "Guerreiros", title: "Guerreiros"}, {id: "PSG", title: "PSG"}]} required />
+                                            <Select label="Clube:" className={styles.input} name="club" placeholder="gol" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "14 BIS", title: "14 BIS" }]} required />
                             </div>
                                         <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" required />
                         </div>
