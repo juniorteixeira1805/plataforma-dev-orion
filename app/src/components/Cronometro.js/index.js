@@ -11,10 +11,10 @@ function MyTimer( props ) {
     } = props
 
   let {
-    seconds = JSON.parse(localStorage.getItem('@time-gamer')).segundos,
-    minutes = JSON.parse(localStorage.getItem('@time-gamer')).minutos,
-    hours = JSON.parse(localStorage.getItem('@time-gamer')).horas,
-    days = JSON.parse(localStorage.getItem('@time-gamer')).dias,
+    seconds,
+    minutes,
+    hours,
+    days,
     isRunning,
     start,
     pause,
