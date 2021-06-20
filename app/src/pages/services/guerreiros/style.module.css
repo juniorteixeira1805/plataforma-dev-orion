@@ -98,7 +98,7 @@
     .section {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 1rem 1rem;
     }
     .div{
         display: flex;
@@ -107,5 +107,8 @@
 
     .textarea{
         height: 12rem;
+    }
+    .input{
+        margin: 0.5rem;
     }
   }
