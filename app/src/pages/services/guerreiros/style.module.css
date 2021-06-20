@@ -98,23 +98,14 @@
     .section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 0;
+        padding: 1rem 1rem;
     }
     .div{
         display: flex;
         flex-direction: column;
-        margin: 0;
     }
-    form {
-        margin: 0;
-    }
+
     .textarea{
-        height: 12rem;
-        margin: 0;
-    }
-    .textarea.section form select option{
-        margin: 0;
+        height: 10rem;
     }
   }
