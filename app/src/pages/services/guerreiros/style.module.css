@@ -110,7 +110,7 @@
     .textarea{
         height: 12rem;
     }
-    .input{
-        margin: 0.5rem;
+    .textarea.section form select option{
+        margin: 0;
     }
   }
