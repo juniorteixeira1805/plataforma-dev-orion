@@ -105,10 +105,14 @@
     .div{
         display: flex;
         flex-direction: column;
+        margin: 0;
     }
-
+    form {
+        margin: 0;
+    }
     .textarea{
         height: 12rem;
+        margin: 0;
     }
     .textarea.section form select option{
         margin: 0;
