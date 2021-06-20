@@ -18,7 +18,7 @@ export default function Guerreiros() {
 
         try {
             async function getDadosJogo() {
-                let response = await api.get(`jogo/60bb996338a986017c428999`)
+                let response = await api.get(`jogo/60ce70f1417d55238cb043f8`)
                 console.log(response.data)
                 let options = []
                 options.push({ id: null, title: "" }, { id: "Jogador adversário", title: "Jogador adversário" })
@@ -41,7 +41,7 @@ export default function Guerreiros() {
     useEffect(() => {
         try {
             async function addTime() {
-                await api.put(`edit/60bb996338a986017c428999`, {
+                await api.put(`edit/60ce70f1417d55238cb043f8`, {
                     time: minutos
                 })
             }
@@ -63,7 +63,7 @@ export default function Guerreiros() {
         console.log(data)
         console.log(minutos)
         try {
-            await api.put(`addevent/60bb996338a986017c428999`, {
+            await api.put(`addevent/60ce70f1417d55238cb043f8`, {
                 description: data.description,
                 event: data.evento,
                 player: data.jogador,
@@ -79,7 +79,7 @@ export default function Guerreiros() {
 
     async function handleSubmitEscalacao(data) {
         try {
-            await api.put(`addescalacao/60bb996338a986017c428999`, {
+            await api.put(`addescalacao/60ce70f1417d55238cb043f8`, {
                 idJogador: data.player,
             })
         } catch (error) {
@@ -89,7 +89,7 @@ export default function Guerreiros() {
 
     async function handleSubmitStatus(data) {
         try {
-            await api.put(`edit/60bb996338a986017c428999`, {
+            await api.put(`edit/60ce70f1417d55238cb043f8`, {
                 status: data.status,
             })
         } catch (error) {
@@ -155,7 +155,7 @@ export default function Guerreiros() {
                         <div className={styles.div}>
                             <div style={{width: '100%', margin: '0 1rem 0 0'}}>
                                 <Input className={styles.input} name="evento" value="GOOOL" disabled/>
-                                            <Select label="Clube:" className={styles.input} name="club" placeholder="club" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "14 BIS", title: "14 BIS" }]} required />
+                                            <Select label="Clube:" className={styles.input} name="club" placeholder="club" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "Liverpool", title: "Liverpool" }]} required />
                             </div>
                                         <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" required />
                         </div>
@@ -170,7 +170,7 @@ export default function Guerreiros() {
                         <div className={styles.div}>
                             <div style={{width: '100%', margin: '0 1rem 0 0'}}>
                                 <Input className={styles.input} name="evento" value="Cartão" disabled/>
-                                            <Select label="Clube:" className={styles.input} name="club" placeholder="gol" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "14 BIS", title: "14 BIS" }]} required />
+                                            <Select label="Clube:" className={styles.input} name="club" placeholder="gol" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "Liverpool", title: "Liverpool" }]} required />
                             </div>
                                         <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" required />
                         </div>
