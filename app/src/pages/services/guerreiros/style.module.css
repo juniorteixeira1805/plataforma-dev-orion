@@ -92,3 +92,15 @@
 
     width: 100%;
 }
+
+/* Small widgets */
+@media (max-width: 480px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+    .div{
+        display: flex;
+        flex-direction: column;
+    }
+  }
