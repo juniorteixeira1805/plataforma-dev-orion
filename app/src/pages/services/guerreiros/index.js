@@ -143,7 +143,7 @@ export default function Guerreiros() {
                 <section className={styles.section}>
                 {
                     estado === "livre" ?
-                            <Form onSubmit={handleSubmitEvento}>
+                    <Form onSubmit={handleSubmitEvento}>
                         <div className={styles.div}>
                             <Input label="Evento" className={styles.input} name="evento" placeholder="Informe o evento" />
                                     <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" />
@@ -152,32 +152,32 @@ export default function Guerreiros() {
                     </Form>
 
                     : estado === "gol" ?
-                                <Form onSubmit={handleSubmitEvento}>
+                    <Form onSubmit={handleSubmitEvento}>
                         <div className={styles.div}>
                             <div style={{width: '100%', margin: '0 1rem 0 0'}}>
                                 <Input className={styles.input} name="evento" value="GOOOL" disabled/>
-                                            <Select label="Clube:" className={styles.input} name="club" placeholder="club" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "Liverpool", title: "Liverpool" }]} required />
+                                <Select label="Clube:" className={styles.input} name="club" placeholder="club" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "Liverpool", title: "Liverpool" }]} required />
                             </div>
-                                        <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" required />
+                            <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" required />
                         </div>
                         <div className={styles.div}>
-                                        <Select label="Jogador:" className={styles.input} name="jogador" placeholder="gol" options={escalacao} required />
-                                        <Select label="Assistência:" className={styles.input} name="assistance" placeholder="Assistência" options={escalacao} />
+                            <Select label="Jogador:" className={styles.input} name="jogador" placeholder="gol" options={escalacao} required />
+                            <Select label="Assistência:" className={styles.input} name="assistance" placeholder="Assistência" options={escalacao} />
                         </div>
                         <button className={styles.button} type="submit">Salvar</button>
                     </Form>
                     :
-                                <Form onSubmit={handleSubmitEvento}>
+                    <Form onSubmit={handleSubmitEvento}>
                         <div className={styles.div}>
                             <div style={{width: '100%', margin: '0 1rem 0 0'}}>
                                 <Input className={styles.input} name="evento" value="Cartão" disabled/>
-                                            <Select label="Clube:" className={styles.input} name="club" placeholder="gol" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "Liverpool", title: "Liverpool" }]} required />
+                                <Select label="Clube:" className={styles.input} name="club" placeholder="gol" options={[{ id: "Guerreiros", title: "Guerreiros" }, { id: "Liverpool", title: "Liverpool" }]} required />
                             </div>
                                         <Textarea className={styles.textarea} name="description" placeholder="Descreva o lance" required />
                         </div>
                         <div className={styles.div}>
-                                        <Select label="Cor:" className={styles.input} name="color" placeholder="gol" options={[{ id: "Amarelo", title: "Amarelo" }, { id: "Vermelho", title: "Vermelho" }]} required />
-                                        <Select label="Jogador:" className={styles.input} name="jogador" placeholder="Cor do cartão" options={escalacao} required />
+                            <Select label="Cor:" className={styles.input} name="color" placeholder="gol" options={[{ id: "Amarelo", title: "Amarelo" }, { id: "Vermelho", title: "Vermelho" }]} required />
+                            <Select label="Jogador:" className={styles.input} name="jogador" placeholder="Cor do cartão" options={escalacao} required />
                         </div>
                         <button className={styles.button} type="submit">Salvar</button>
                     </Form>
