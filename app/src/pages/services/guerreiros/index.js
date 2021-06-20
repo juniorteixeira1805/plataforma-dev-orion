@@ -10,6 +10,7 @@ export default function Guerreiros() {
 
     const [escalacao, setEscalacao] = useState()
     const [estado, setEstado] = useState('livre')
+    const [jogo, setJogo] = useState()
     const [jogadoresSelect, setJogadoresSelect] = useState()
     const [minutos, setMinutos] = useState()
 
@@ -19,7 +20,7 @@ export default function Guerreiros() {
         try {
             async function getDadosJogo() {
                 let response = await api.get(`jogo/60ce70f1417d55238cb043f8`)
-                console.log(response.data)
+                setJogo(response.data)
                 let options = []
                 options.push({ id: null, title: "" }, { id: "Jogador adversário", title: "Jogador adversário" })
                 response.data.escalacao.map((obj) => { options.push({ id: obj.idJogador, title: obj.name }) })
@@ -182,7 +183,11 @@ export default function Guerreiros() {
                     </Form>
                 }
                 </section>
-
+            </main>
+        </>
+    )
+}
+/*
                 <section className={styles.section}>
                     <Form onSubmit={handleSubmitEscalacao}>
                         {
@@ -194,7 +199,4 @@ export default function Guerreiros() {
                         <button className={styles.button} type="submit">Salvar</button>
                     </Form>
                 </section>
-            </main>
-        </>
-    )
-}
+*/
